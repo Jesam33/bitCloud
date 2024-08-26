@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { DM_Sans } from "next/font/google";
+import Image from "next/image";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -15,10 +16,11 @@ const Footer = () => {
     <footer className="bg-white w-full py-12 mt-[2%] border-gray-200">
       <div className="mx-auto w-[90%] px-4">
         {/* Mobile Design */}
-        <div className="block md:hidden">
+        <div className="block  md:hidden">
           {/* Logo Section */}
-          <div className="mb-6">
-            <img src="/logo.png" alt="Logo" className="h-10 mx-auto" />
+          <div className="mb-6 flex gap-2 items-center ">
+            <Image width={50} height={50} quality={80} src="/logo.png" alt="Logo" className="h-10 w-auto " />
+            <h1 className="text-2xl font-[500]" style={{ letterSpacing: "1px" }}>Bitcloud</h1>
           </div>
 
           {/* Footer Nav Dropdown */}
@@ -138,27 +140,30 @@ const Footer = () => {
               Copyright © 2021 UIB LLC. All rights reserved
             </p>
             <div className="flex justify-center space-x-4">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                <img src="/FbLine.png" alt="Facebook" className="h-6" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                <img src="/TweetLine.png" alt="Twitter" className="h-6" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
-                <img src="/InstaLine.png" alt="Instagram" className="h-6" />
-              </a>
-            </div>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              <Image width={30} height={30} quality={80} src="/FbLine.png" alt="Facebook" className="h-8" />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              <Image width={30} height={30} quality={80} src="/TweetLine.png" alt="Twitter" className="h-8" />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              <Image width={30} height={30} quality={80} src="/InstaLine.png" alt="Instagram" className="h-8" />
+            </a>
+          </div>
           </div>
         </div>
 
         {/* Tablet and Above Design */}
-        <div className="hidden md:grid lg:grid-cols-12 gap-8">
+        <div className="hidden md:grid md:grid-cols-9 lg:grid-cols-12 gap-8">
           {/* Logo Section */}
-          <div className="col-span-3 flex flex-col items-start mb-6">
-            <img
+          <div className="lg:col-span-4 md:col-span-3 flex gap-[30%] md:gap-[20%] mb-6">
+            <Image
+              width={50}
+              height={50}
+              quality={80}
               src="/logo.png"
               alt="Logo"
-              className="h-16 w-auto mb-4"
+              className="h-16 md:w-10 md:h-10 w-auto mb-4"
             />
             <ul className="space-y-4">
               <li>
@@ -205,7 +210,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Section */}
-          <div className="col-span-3 mb-6 text-left">
+          <div className="lg:col-span-4 md:col-span-3 mb-6 text-left">
             <p className={`${dmSans.className} font-[700] text-[16px]`}>
               CONTACT
             </p>
@@ -224,7 +229,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="col-span-6 mb-6 text-left">
+          <div className="lg:col-span-4 md:col-span-3 mb-6 text-left">
             <p className={`${dmSans.className} font-[700] text-[16px]`}>
               NEWSLETTER
             </p>
@@ -236,11 +241,11 @@ const Footer = () => {
               resources.
             </p>
             <form className="flex w-full mt-6">
-              <div className="flex w-full rounded-[20px] p-2 gap-2 border px-3">
+              <div className="flex w-full rounded-[20px] p-1 gap-2 border px-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className={`${dmSans.className} flex-1 px-4 py-2 font-[400] text-[16px] text-[#777E90] border-none rounded-[20px] focus:outline-none`}
+                  className={`${dmSans.className} flex-1 md:w-10 px-4 py-2  font-[400] text-[16px] md:text-[12px] text-[#777E90] border-none rounded-[20px] md:rounded-[10px] focus:outline-none`}
                 />
                 <button className="px-3 py-2 bg-blue-500 text-white rounded-[50%] hover:bg-blue-600">
                   →
@@ -251,19 +256,19 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-12 border-t pt-4 text-center">
-          <p className="text-[#777E90] text-[14px] font-[400] mb-4">
+        <div className="mt-12 hidden  border-t md:flex justify-between pt-4 text-center">
+          <p className="text-[#777E90] text-[14px] md:text-[12px] font-[400] mb-4">
             Copyright © 2021 UIB LLC. All rights reserved
           </p>
           <div className="flex justify-center space-x-4">
             <a href="#" className="text-gray-600 hover:text-gray-900">
-              <img src="/FbLine.png" alt="Facebook" className="h-8" />
+              <Image width={30} height={30} quality={80} src="/FbLine.png" alt="Facebook" className="h-8 md:w-6 md:h-6" />
             </a>
             <a href="#" className="text-gray-600 hover:text-gray-900">
-              <img src="/TweetLine.png" alt="Twitter" className="h-8" />
+              <Image width={30} height={30} quality={80} src="/TweetLine.png" alt="Twitter" className="h-8 md:w-6 md:h-6" />
             </a>
             <a href="#" className="text-gray-600 hover:text-gray-900">
-              <img src="/InstaLine.png" alt="Instagram" className="h-8" />
+              <Image width={30} height={30} quality={80} src="/InstaLine.png" alt="Instagram" className="h-8 md:w-6 md:h-6" />
             </a>
           </div>
         </div>

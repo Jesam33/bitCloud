@@ -106,7 +106,7 @@ const TradeAnywhere = () => {
             width={1000}
             height={1000}
             quality={100}
-            className="relative w-[100%] mb-3 md:w-[100%] z-20"
+            className="relative w-[100%] mb-3 md:w-[100%] lg:w-[60%] z-20"
           />
         </div>
       </div>

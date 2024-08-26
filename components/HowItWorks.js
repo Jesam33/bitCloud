@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -64,7 +65,10 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <SwiperSlide className="p-4"  key={index}>
               <div className="text-center px-2  rounded-[30px] shadow-2xl flex flex-col items-center">
-                <img
+                <Image 
+                  width={50}
+                  height = {50}
+                  quality = {80}
                   src={step.image}
                   alt={step.title}
                   className="mx-auto mb-4 h-28 w-80 object-contain"
@@ -100,13 +104,19 @@ const HowItWorks = () => {
             className="text-center flex flex-col items-center"
           >
             <div className="relative">
-              <img
-                src={step.image}
+              <Image 
+                  width={50}
+                  height = {50}
+                  quality = {80}
+                   src={step.image}
                 alt={step.title}
                 className="mx-auto mb-4 h-28 w-40 object-contain"
               />
               {index < steps.length - 1 && (
-                <img
+                <Image 
+                width={50}
+                height = {50}
+                quality = {80}
                   src={step.connector}
                   alt="Connector line"
                   className="absolute top-[50px] transform -translate-y-1/2 left-full w-[100%] h-4 object-contain"
