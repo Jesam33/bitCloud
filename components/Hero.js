@@ -11,7 +11,7 @@ const dmSans = DM_Sans({
 
 const Hero = () => {
   return (
-    <div className="w-[100%] md:w-[90%]  flex flex-col mt-4 lg:mt-0 md:flex-row px-5 md:px-10 gap-6 md:gap-10">
+    <div className="w-[100%] md:w-[90%] md: flex flex-col mt-[25%] md:mt-[10%] lg:mt-0 md:flex-row px-5 md:px-10 gap-6 md:gap-10">
       <div className="w-full md:w-1/2 my-auto">
         <h1
           className={`${dmSans.className} text-3xl md:text-[45px] lg:text-[64px] font-[700]`}

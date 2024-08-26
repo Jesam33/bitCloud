@@ -15,8 +15,8 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#FCFCFD] w-full" style={{ borderBottom: '1px solid #F5F5F5' }}>
-      <div className="flex justify-between items-center h-[70px] px-5 sm:px-8 md:px-10 lg:px-16 py-[20px] md:py-[40px]">
+    <header className="bg-[#FCFCFD] fixed w-full" style={{ borderBottom: '1px solid #F5F5F5', zIndex: '100' }}>
+      <div className="flex justify-between items-center  h-[70px] px-5 sm:px-8 md:px-10 lg:px-16 py-[20px] md:py-[40px]">
         {/* Logo Section */}
         <div className="flex items-center">
           <div className="flex items-center pr-4 md:pr-[40%] lg:pr-[30%]" style={{ borderRight: "1px solid #E6E8EC" }}>
@@ -79,11 +79,11 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="sm:hidden md:flex flex flex-col items-start px-5 pb-4 space-y-2">
+       <div className="sm:hidden items-center h-screen md:flex flex flex-col mt-11  px-5 pb-4 space-y-7 transition-all duration-400 ease-in-out">
           <Link href="/" className={`${dmSans.className} text-[17px]`}>Exchange</Link>
-          <Link href="/">
-            <select className="bg-transparent text-[17px]">
-              <option>Buy Crypto</option>
+          <Link href="/" className={`${dmSans.className} text-[17px]`}>
+            <select className="bg-transparent ">
+              <option className="text-[14px]">Buy Crypto</option>
             </select>
           </Link>
           <Link href="/" className={`${dmSans.className} text-[17px]`}>Market</Link>
@@ -92,12 +92,12 @@ const Header = () => {
             <Button
               btnLabel="Sign up"
               btnType="submit"
-              btnClass={`${dmSans.className} w-full text-white text-[14px] font-[500] rounded-[90px] bg-[#3772FF] py-2`}
+              btnClass={`${dmSans.className} w-[70%] mx-auto text-white text-[14px] font-[500] rounded-[90px] bg-[#3772FF] py-2`}
             />
             <Button
               btnLabel="Login"
               btnType="submit"
-              btnClass={`${dmSans.className} w-full text-[#23262F] text-[14px] font-[600] rounded-[90px] border border-[#E6E8EC] py-2`}
+              btnClass={`${dmSans.className} w-[70%] mx-auto  text-[#23262F] text-[14px] font-[600] rounded-[90px] border border-[#E6E8EC] py-2`}
             />
           </div>
         </div>
